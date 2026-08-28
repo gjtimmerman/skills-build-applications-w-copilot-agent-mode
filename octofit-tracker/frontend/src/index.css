@@ -1,0 +1,37 @@
+:root {
+  --accent: #176b5f;
+  --background: #edf3ef;
+  --border: #cbd8d0;
+  --heading: Georgia, 'Times New Roman', serif;
+  --ink: #17231f;
+  --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --muted: #5d6b66;
+  --panel: #f8fbf8;
+
+  color: var(--ink);
+  font-family: Aptos, 'Segoe UI', sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(23, 107, 95, 0.14), transparent 32rem),
+    linear-gradient(135deg, #edf3ef 0%, #f6efe4 100%);
+  margin: 0;
+  min-width: 320px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}

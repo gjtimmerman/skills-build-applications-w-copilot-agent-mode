@@ -25,7 +25,7 @@ Together, Paul and the IT team identified key requirements for OctoFit Tracker:
 - Simple, intuitive interface designed specifically for teenagers
 - Quick activity logging to minimize friction
 - Social features that respect student privacy
-- Gamification elements to maintain engagement
+- Gamification elements to maintain engagement.
 
 ## Current Development Status
 
