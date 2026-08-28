@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import { getApiUrl, getCollectionItems } from '../api.js';
+import { getCollectionItems } from '../api.js';
+
+const apiEndpoint = import.meta.env.VITE_CODESPACE_NAME
+  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/`
+  : 'http://localhost:8000/api/leaderboard/';
 
 function Leaderboard() {
   const [entries, setEntries] = useState([]);
@@ -11,7 +15,7 @@ function Leaderboard() {
 
     async function loadLeaderboard() {
       try {
-        const response = await fetch(getApiUrl('leaderboard'));
+        const response = await fetch(apiEndpoint);
 
         if (!response.ok) {
           throw new Error(`Leaderboard request failed with ${response.status}`);

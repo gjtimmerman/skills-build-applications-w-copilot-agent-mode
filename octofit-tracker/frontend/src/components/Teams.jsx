@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import { getApiUrl, getCollectionItems } from '../api.js';
+import { getCollectionItems } from '../api.js';
+
+const apiEndpoint = import.meta.env.VITE_CODESPACE_NAME
+  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/teams/`
+  : 'http://localhost:8000/api/teams/';
 
 function Teams() {
   const [teams, setTeams] = useState([]);
@@ -11,7 +15,7 @@ function Teams() {
 
     async function loadTeams() {
       try {
-        const response = await fetch(getApiUrl('teams'));
+        const response = await fetch(apiEndpoint);
 
         if (!response.ok) {
           throw new Error(`Teams request failed with ${response.status}`);
